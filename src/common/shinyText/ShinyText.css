@@ -1,0 +1,26 @@
+.shiny-text {
+    color: transparent;
+    background: linear-gradient(
+            120deg,
+            #030505 40%,   /* Tailwind blue-500 as primary */
+            #ffffff 50%,  /* white highlight */ #070b12 60%   /* back to primary */
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: -100%;
+    }
+}
+
+.shiny-text.disabled {
+    animation: none;
+}

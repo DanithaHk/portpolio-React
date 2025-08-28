@@ -1,0 +1,23 @@
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* default: mobile 2 columns */
+    gap: 2rem;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+}
+
+/* Tablet: 3 columns */
+@media (min-width: 768px) {
+    .skill-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktop: 5 columns */
+@media (min-width: 1024px) {
+    .skill-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

@@ -1,0 +1,28 @@
+#about {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 60px 10%;
+
+}
+
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #about h1 {
+        font-size: 1rem;
+        text-align: center;
+    }
+    #about_left-section h1 {
+        text-align: center;
+        font-size: 1.5rem;
+
+    }
+    .about_WorkFlowContent {
+        text-align: center;
+    }
+}

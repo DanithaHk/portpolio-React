@@ -1,0 +1,15 @@
+/* contact.css */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;        /* Responsive stacking */
+    gap: 2rem;              /* Space between items */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.contact-left,
+.contact-right {
+    flex: 1;                /* Take equal space */
+    min-width: 300px;       /* Makes it stack on small screens */
+}

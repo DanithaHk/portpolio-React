@@ -73,24 +73,35 @@ function Navbar() {
 
             {!isDesktop && isMenuOpen && (
                 <div className="fixed top-0 right-0 h-full w-1/2 bg-[#ced8ff] p-6 flex flex-col space-y-6 z-40 shadow-lg">
+                    {/* Close Button */}
+                    <button
+                        onClick={() => setIsMenuOpen(false)}
+                        className="self-end mb-4 p-2 rounded hover:bg-gray-200"
+                        aria-label="Close menu"
+                    >
+                        <X size={28} />
+                    </button>
+
                     {links.map((link) => (
                         <ScrollLink
                             key={link}
                             to={link.toLowerCase()}
                             smooth={true}
                             duration={500}
-                            spy={true}                 // << track scroll
-                            offset={-64}               // << adjust for navbar height
+                            spy={true}
+                            offset={-64}
                             activeClass="text[#00A67D] after:block after:h-1 after:w-1 after:rounded-full after:bg-[#00A67D] after:mt-1"
                             className="cursor-pointer text-gray-700 hover:text-blue-700 font-medium relative"
+                            onClick={() => setIsMenuOpen(false)} // Close menu when link clicked
                         >
                             {link}
                         </ScrollLink>
-
                     ))}
+
                     <Moon className="cursor-pointer hover:text-blue-700" />
                 </div>
             )}
+
         </nav>
     );
 }

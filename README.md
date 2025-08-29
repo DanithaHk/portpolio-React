@@ -1,8 +1,6 @@
-# Project Title
+# Danitha Dinuwan Portfolio
 
-**Danitha Dinuwan Portfolio**
-
-A personal portfolio showcasing web development skills with React, TailwindCSS, GSAP animations, and smooth scroll navigation. Includes sections like Home, About, Service, Learn, Project, and Contact with interactive animations.
+A personal portfolio showcasing web development skills with **React**, **TailwindCSS**, **GSAP animations**, and smooth scroll navigation. Includes sections like **Home, About, Service, Learn, Project, and Contact** with interactive animations.
 
 ---
 
@@ -22,8 +20,14 @@ A personal portfolio showcasing web development skills with React, TailwindCSS, 
 - TypeScript  
 - TailwindCSS  
 - GSAP (GreenSock Animation Platform)  
-- react-scroll  
+- `react-scroll`  
 - Lucide React (icons)  
+
+---
+
+## 🌐 Hosted Link
+
+[Portfolio](https://portfoliodanitha.netlify.app/)
 
 ---
 
@@ -32,5 +36,5 @@ A personal portfolio showcasing web development skills with React, TailwindCSS, 
 1. **Clone the repository**:
 
 ```bash
-git clone [https://github.com/DanithaHk/portpolio-React.git>
-cd <portpolio-React>
+git clone https://github.com/DanithaHk/portpolio-React.git
+cd portpolio-React

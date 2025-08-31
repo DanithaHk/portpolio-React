@@ -27,7 +27,7 @@ function Service() {
             icon: <FaCodeBranch className="w-10 h-10 mb-5 text-green-600" />,
             title: "Desktop Software Development",
             shortDesc: "Create Modern Enterprise Application that is reliable and consistent with awesome ideas.",
-            points: ["C# .NET Applications", "Java Swing / JavaFX", "Electron.js Apps"],
+            points: ["C# .NET Applications", "Java Swing / JavaFX", "java / Spring Boot"],
         },
         {
             icon: <MdOutlinePayment className="w-10 h-10 mb-5 text-purple-600" />,

@@ -8,7 +8,7 @@ export default function Contact() {
         <section id="contact" className=" py-16  h-[92vh]">
             <AnimatedContent
                 distance={150}
-                direction="horizontal"
+                direction="vertical"
                 reverse={false}
                 duration={1.5}
                 ease="bounce.out"

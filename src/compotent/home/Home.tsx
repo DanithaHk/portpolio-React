@@ -1,6 +1,6 @@
 import fp from "../../assets/490895135_2147162012388846_3715941221828834769_n.jpg";
 import FadeContent from "../../common/FadeContent/FadeContent.tsx";
-import AnimatedContent from "../../common/Animated/Animated.tsx";
+import AnimatedContentUp from "../../common/Animated/AnimatedUp.tsx";
 
 function Home() {
     return (
@@ -23,11 +23,11 @@ function Home() {
                     />
                 </FadeContent>
 
-                <AnimatedContent
+                <AnimatedContentUp
                     distance={150}
-                    direction="horizontal"
+                    direction="vertical"
                     reverse={false}
-                    duration={1.5}
+                    duration={1.2}
                     ease="bounce.out"
                     initialOpacity={0.2}
                     animateOpacity
@@ -53,7 +53,7 @@ function Home() {
                         </span>
                     </p>
                 </div>
-                </AnimatedContent>
+                </AnimatedContentUp>
             </div>
         </div>
     );

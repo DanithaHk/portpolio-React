@@ -72,7 +72,7 @@ function Service() {
     return (
         <AnimatedContent
             distance={150}
-            direction="horizontal"
+            direction="vertical"
             reverse={false}
             duration={1.5}
             ease="bounce.out"

@@ -23,7 +23,9 @@ function Navbar() {
         } else {
             document.body.style.overflow = "unset";
         }
-        return () => (document.body.style.overflow = "unset");
+        return () => {
+            document.body.style.overflow = "unset";
+        };
     }, [isMenuOpen]);
 
     const links = ["Home", "About", "Service", "Learn", "Project", "Contact"];

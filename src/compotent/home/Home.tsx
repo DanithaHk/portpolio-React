@@ -1,4 +1,4 @@
-import fp from "../../assets/490895135_2147162012388846_3715941221828834769_n.jpg";
+import fp from "../../assets/me.jpg";
 import FadeContent from "../../common/FadeContent/FadeContent.tsx";
 import AnimatedContentUp from "../../common/Animated/AnimatedUp.tsx";
 

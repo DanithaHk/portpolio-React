@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import logo from "../../assets/mylogo.png";
 import {  X } from "lucide-react";
-
+import resume from "../../assets/Danitha-Dinuwan-Resume.pdf";
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
@@ -61,10 +61,9 @@ function Navbar() {
 
             {isDesktop && (
                 <a
-                    href="/resume.pdf"
-                    className="cursor-pointer bg-[#00C897] hover:bg-[#00A67D]/90 hover:text-white py-2 px-4 lg:py-3 lg:px-6 bg-white rounded font-medium text-base"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={resume}
+                    download="Danitha_Dinuwan_Resume.pdf"
+                    className="cursor-pointer bg-[#00C897] hover:bg-[#00A67D]/90 hover:text-white py-2 px-4 lg:py-3 lg:px-6 rounded font-medium text-base"
                 >
                     Resume
                 </a>

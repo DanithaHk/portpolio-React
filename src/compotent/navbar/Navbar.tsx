@@ -98,11 +98,10 @@ function Navbar() {
 
             {!isDesktop && (
                 <div
-                    className={`fixed top-0 right-0 h-full w-1/3 sm:w-1/2 bg-gray-100 p-6 flex flex-col z-40 shadow-lg transform transition-transform duration-500 ease-in-out ${
+                    className={`fixed top-0 right-0 h-full w-1/2 sm:w-1/2 bg-gray-100 p-6 flex flex-col z-40 shadow-lg transform transition-transform duration-500 ease-in-out ${
                         isMenuOpen ? "translate-x-0" : "translate-x-full"
                     }`}
                 >
-                    {/* Close Button inside menu */}
                     <button
                         onClick={() => setIsMenuOpen(false)}
                         className="self-end mb-6 text-gray-700 hover:text-red-500 transition-colors duration-300"
@@ -134,6 +133,13 @@ function Navbar() {
                                 {link}
                             </ScrollLink>
                         ))}
+                        <a
+                            href={resume}
+                            download="Danitha_Dinuwan_Resume.pdf"
+                            className="cursor-pointer bg-[#00C897] w-[5rem] hover:bg-[#00A67D]/90 text-white py-2 px-4 sm:py-3 sm:px-6 rounded font-medium text-sm sm:text-base"
+                        >
+                            Resume
+                        </a>
 
                     </div>
                 </div>

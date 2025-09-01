@@ -24,7 +24,7 @@ function Home() {
                 </FadeContent>
 
                 <AnimatedContentUp
-                    distance={150}
+                    distance={10}
                     direction="vertical"
                     reverse={false}
                     duration={1.2}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import logo from "../../assets/mylogo.png";
-import { Moon, X } from "lucide-react";
+import {  X } from "lucide-react";
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,7 +56,6 @@ function Navbar() {
                             {link}
                         </ScrollLink>
                     ))}
-                    <Moon className="cursor-pointer hover:text-[#00A67D] ml-6" />
                 </div>
             )}
 
@@ -136,12 +135,11 @@ function Navbar() {
                                 {link}
                             </ScrollLink>
                         ))}
-                        <Moon className="cursor-pointer hover:text-blue-700" />
+
                     </div>
                 </div>
             )}
 
-            {/* Mobile Overlay */}
             {!isDesktop && (
                 <div
                     className={`fixed inset-0 bg-black transition-opacity duration-300 ${

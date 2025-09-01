@@ -40,7 +40,6 @@ export default function Lernt() {
             id="learn"
             className="py-16  text-gray-800 min-h-screen flex flex-col  ">
 
-            {/* Section Header */}
             <div className="text-center pt-10 mb-8 mt-[50px]">
                 <h2 className="text-3xl font-bold text-black mb-3">What I Learnt</h2>
                 <p className="text-gray-600 max-w-3xl mb-8">
@@ -48,7 +47,6 @@ export default function Lernt() {
                 </p>
             </div>
 
-            {/* Skills Grid */}
             <div className="skill-grid">
                 {skills.map((skill, index) => (
                     <div key={index} className="text-center">

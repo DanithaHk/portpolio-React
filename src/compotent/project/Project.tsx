@@ -8,6 +8,7 @@ import "./Project.css"
 import Tilt from 'react-parallax-tilt';
 import ShinyText from "../../common/shinyText/ShinyText.tsx";
 import AnimatedContent from "../../common/Animated/Animated.tsx";
+import FadeContent from "../../common/FadeContent/FadeContent.tsx";
 
 
 
@@ -59,19 +60,20 @@ const project = [
 
 export function Project() {
     return (
-        <AnimatedContent
-            distance={150}
-            direction="vertical"
-            reverse={false}
-            duration={1.5}
-            ease="bounce.out"
-            initialOpacity={0.2}
-            animateOpacity
-            scale={1.1}
-            threshold={0.2}
-            delay={0.3}
-        >
+
         <section id="project" className=" py-16 lg:px-20 min-h-screen bg-gray-100 ">
+            <AnimatedContent
+                distance={100}
+                direction="vertical"
+                reverse={false}
+                duration={1.5}
+                ease="bounce.out"
+                initialOpacity={0.2}
+                animateOpacity
+                scale={1.1}
+                threshold={0.2}
+                delay={0.3}
+            >
             <div className="service-header text-center pt-10 mb-8 ">
                 <h1 className="text-3xl font-extrabold text-gray-800 mb-3 mt-[50px]">
                     Browse My Recent
@@ -80,7 +82,20 @@ export function Project() {
                     Projects
                 </p>
             </div>
-
+            </AnimatedContent>
+            <AnimatedContent
+                distance={10}
+                direction="vertical"
+                reverse={false}
+                duration={1}
+                ease="ease-out"
+                initialOpacity={0.2}
+                animateOpacity
+                scale={1.1}
+                threshold={0.2}
+                delay={0.3}
+            >
+            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
             <div className="project-grid ">
                 {project.map((projects, index) => (
                     <Tilt
@@ -115,8 +130,9 @@ export function Project() {
                     </Tilt>
                 ))}
             </div>
+            </FadeContent>
+            </AnimatedContent>
         </section>
-        </AnimatedContent>
 
     );
 }

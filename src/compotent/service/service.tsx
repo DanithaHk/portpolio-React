@@ -4,6 +4,7 @@ import { FaCodeBranch, FaCode, FaMobile, FaUser, FaLaptopCode } from "react-icon
 import { MdOutlinePayment } from "react-icons/md";
 import "../service/service.css"
 import AnimatedContent from "../../common/Animated/Animated.tsx";
+import FadeContent from "../../common/FadeContent/FadeContent.tsx";
 function Service() {
     interface GridItemProps {
         icon: JSX.Element;
@@ -70,20 +71,20 @@ function Service() {
     };
 
     return (
-        <AnimatedContent
-            distance={150}
-            direction="vertical"
-            reverse={false}
-            duration={1.5}
-            ease="bounce.out"
-            initialOpacity={0.2}
-            animateOpacity
-            scale={1.1}
-            threshold={0.2}
-            delay={0.3}
-        >
+
         <section id="service" className="py-16 px-6 lg:px-20 min-h-screen bg-gray-100 min-h-screen ">
-            {/* Header */}
+            <AnimatedContent
+                distance={150}
+                direction="vertical"
+                reverse={false}
+                duration={1.5}
+                ease="bounce.out"
+                initialOpacity={0.2}
+                animateOpacity
+                scale={1.1}
+                threshold={0.2}
+                delay={0.3}
+            >
             <div className="service-header text-center pt-10 mb-8 mt-[50px]">
                 <h1 className="text-4xl font-extrabold text-gray-800 mb-3 mt-[50px]">
                     What I Do
@@ -92,25 +93,20 @@ function Service() {
                     Obviously I am a Full stack developer. Experienced with all stages of the development
                 </p>
             </div>
-
-
-            {/* Services Grid */}
+            </AnimatedContent>
+            <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
             <div className="service-grid">
                 {services.map((service, index) => (
                     <div
                         key={index}
                         className="bg-white p-8 rounded-xl shadow-md flex flex-col items-center text-center  hover:shadow-xl hover:scale-105 hover:bg-gray-50 transition-all duration-300 ease-in-out "
                     >
-                        {/* Icon */}
                         {service.icon}
 
-                        {/* Title */}
                         <h2 className="text-lg font-bold text-gray-800 mb-2">{service.title}</h2>
 
-                        {/* Short Description */}
                         <p className="text-gray-600 text-sm mb-4">{service.shortDesc}</p>
 
-                        {/* Points */}
                         {expandedIndex === index && (
                             <ul className="text-gray-700 text-sm text-left mb-4 pl-5 list-disc transition-all duration-300 ease-in-out">
                                 {service.points.map((point, i) => (
@@ -119,7 +115,6 @@ function Service() {
                             </ul>
                         )}
 
-                        {/* Read More Button */}
                         <button
                             onClick={() => toggleExpand(index)}
                             className="text-blue-600 font-semibold text-sm cursor-pointer transition transform duration-300 hover:text-blue-800 hover:translate-x-1"
@@ -129,8 +124,9 @@ function Service() {
                     </div>
                 ))}
             </div>
+            </FadeContent>
         </section>
-        </AnimatedContent>
+
 
     );
 }

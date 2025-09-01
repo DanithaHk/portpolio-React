@@ -2,26 +2,28 @@ import {  FaCodeBranch, FaCode,FaMobile } from "react-icons/fa";
 import ap from "../../assets/488789292_2138520546586326_9209343360120903930_n.jpg";
 import "./about.css";
 import AnimatedContent from "../../common/Animated/Animated.tsx";
+import FadeContent from "../../common/FadeContent/FadeContent.tsx";
 export default function About() {
 
     return (
-        <AnimatedContent
-            distance={150}
-            direction="vertical"
-            reverse={false}
-            duration={1.5}
-            ease="bounce.out"
-            initialOpacity={0.2}
-            animateOpacity
-            scale={1.1}
-            threshold={0.2}
-            delay={0.3}
-        >
+
         <section
             id="about"
         >
-            {/* Left */}
-            <div id="about_left-section"  className="flex-1 mt-5 gap-10 ">
+            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+                <AnimatedContent
+                    distance={10}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1}
+                    ease="ease-out"
+                    initialOpacity={0.2}
+                    animateOpacity
+                    scale={1.1}
+                    threshold={0.2}
+                    delay={0.3}
+                >
+            <div id="about_left-section"  className="flex-1 mt-5 gap-10  ">
                 <h1 className="text-4xl font-bold mb-4 text-gray-800 ">
                     Overview
                 </h1>
@@ -44,9 +46,21 @@ export default function About() {
                     ability.
                 </p>
             </div>
-
-            {/* Right  */}
-            <div id="about_right-section" className="flex-1 n">
+                </AnimatedContent>
+            </FadeContent>
+            <AnimatedContent
+                distance={150}
+                direction="vertical"
+                reverse={false}
+                duration={1.5}
+                ease="bounce.out"
+                initialOpacity={0.2}
+                animateOpacity
+                scale={1.1}
+                threshold={0.2}
+                delay={0.3}
+            >
+            <div id="about_right-section" className="flex-1 w-[40vw]">
                 <div className="about_grid-container flex flex-col sm:flex-row gap-6 flex-wrap justify-center mt-10 ">
 
                     <div className="about_grid-item bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 hover:bg-gray-50 transition-all duration-300 ease-in-out flex flex-col items-center text-center m-2">
@@ -79,7 +93,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
+                </AnimatedContent>
         </section>
-        </AnimatedContent>
     );
 }
